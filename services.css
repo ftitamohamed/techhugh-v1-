@@ -1,0 +1,369 @@
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*------------------------------------------------Styling the nav bar---------------------------------*/
+header nav{
+    /* position: relative; */
+    display:flex;
+    justify-content: space-evenly;
+    position:fixed;
+    align-items: center;
+    background-color:rgba(123, 227, 253, 0.144);
+    z-index: 2;
+    width:100vw;
+    margin:0;
+}
+nav .links{
+  position: relative;
+  
+}
+nav .dMenu:hover  .test{
+  background: green;
+}
+
+nav .menu{
+  
+  /* display:flex; */
+  flex-direction: column;
+  justify-content: center !important;
+  gap:10px;
+  position:absolute;
+  top:10%;
+  background:linear-gradient(to bottom,rgba(14, 53, 179, 0.432),rgba(61, 243, 243, 0.274));
+  display:none;
+}
+.showMenu{
+  display: flex;
+}
+nav .menu a{
+  
+margin-left:50px;
+
+}
+nav>div:first-child{
+  width:15%;
+  height:17.5vh;
+ /*  background: orange; */
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap:5px; */
+  position:relative;
+  left:auto;
+}
+nav>div:first-child img{
+    /* margin-left:20px; */
+  width:80px;
+  height:80px;
+  
+  background:white;
+  border-radius: 50%;
+  margin:0;
+  padding:0;
+}
+nav>div:first-child p{
+    /* transform:translate(-8.5rem); */
+    font-size: 22px;
+    margin:2%;
+    color:white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+nav a {
+    color : white;
+    margin-right:150px;
+    font-size:1.1rem;
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:10px;
+}
+nav  a:hover{
+    color:rgb(177, 0, 0);
+}
+ .stickyHeader{
+    position:fixed;
+    background:linear-gradient(to right,rgba(0, 2, 109, 0.247),rgba(0, 204, 255, 0.212));
+    backdrop-filter: blur(12px);
+} 
+.dropBtn{
+  
+  background:rgba(8, 71, 189, 0.5);
+  z-index: 1;
+  
+  overflow: visible;
+
+ position:relative;
+    right:-20% !important;
+  display:none;
+}
+.dropBtn span{
+  display: block;
+  width:30px;
+  height:5px;
+  margin:5px;
+  
+  background:rgba(47, 196, 255, 0.925);
+}
+.btnInv{
+  background:rgba(47, 196, 255, 0.767);
+  color:rgb(0, 27, 78);
+}
+.spanInv{
+  background:rgb(0, 27, 78) !important;
+}
+.dropDown{
+  position:fixed;
+  top:17.3%;
+  right:0;
+  z-index: 2;
+  height:100%;
+  width:50%;
+  background:linear-gradient(to bottom,rgba(14, 53, 179, 0.432),rgba(61, 243, 243, 0.274));
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  animation: menuAnimation 500ms ease ;
+  display:none;
+}
+.dropDown a{
+  text-align: right;
+  padding:20px;
+  font-size: 18px;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+
+}
+.hide{
+  animation : menuAnimation1 500ms forwards;
+ 
+}
+@keyframes menuAnimation{
+  0%{
+    width:0%;
+  }
+  100%{
+    width:50%;
+  }}
+  @keyframes menuAnimation1{
+    0%{
+      width:50%;
+    }
+    100%{
+      width:0%;
+      
+    }}
+/*------------------------------------------------Styling the header---------------------------------*/
+    header .header{
+        width:100%;
+        height:80vh;
+        background:url(img/section1/istockphoto-1427143523-612x612.jpg);
+        margin:0;
+        padding:0;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        background-position: right;
+        position:relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .header h1{
+        color:white;
+        font-size: 2.1rem;
+        padding:5px;
+        margin:5px;
+        z-index: 1;
+    }
+    .header p{
+        color:white;
+        padding:0;
+        font-size: 1rem;
+        z-index: 1;
+    }
+    .header:after{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:rgba(0, 15, 66, 0.384);
+    }
+    /*------------------------------------------------Styling the benefits---------------------------------*/
+    .benefits{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction: column;
+        gap:5%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:10%;
+       background:rgb(248, 248, 248);
+       /* color:white; */
+       padding:3% 0;
+      }
+    
+    .benefits h1{
+      text-align: center;
+      font-size: 2.1rem;
+    }
+    .benefits p{
+      line-height: 1.2;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    /*------------------------------------------------Styling the values---------------------------------*/
+    .values{
+        width:100%;
+        height:100%;
+        margin-bottom:20%;
+        display:flex;
+        flex-direction: column;
+        gap:5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .values>h1{
+      text-align: center;
+      font-size: 2.1rem;
+    }
+    .values .card{
+      margin:0 2%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 5px 12px rgb(1, 55, 80);
+      padding:2%;
+      
+    }
+    .values .card:nth-child(3){
+      margin:0 2%;
+      display:flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    .values .card:nth-child(3) img{
+      transform: translateX(0rem);
+      margin-right: 2%;
+    }
+    .values>.card:nth-child(3) p{
+      width:80%;
+      font-size:1.1rem;
+    }
+    .values>.card:nth-child(4) p{
+      width:80%;
+      font-size:1.1rem;
+    }
+    .values .card p {
+      width:80%;
+      font-size:1.3rem;
+
+    }
+
+    .values .card  img{
+      transform: translateX(-3rem);
+      width:20rem;
+      height:12rem;
+    }
+    .values .card1{
+      width:20%;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 5px 12px rgb(1, 55, 80);
+      padding:2%;
+    }
+    /*------------------------------------------------Styling the reminder---------------------------------*/
+    .reminder{
+        background:url(img/section1/network-concept-internet-communication-people-connecting-free-video.jpg);
+        width:100%;
+        height:50vh;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        background-position: right;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;}
+    .reminder h1{
+        color:white;
+        font-size: 2.1rem;
+        padding:5px;
+        margin:5px;
+        padding:0;
+        z-index: 1;
+    }
+    .reminder p{
+        color:white;
+        padding:0;
+        font-size: 1.1rem;
+        z-index: 1;
+    }
+    .reminder button{
+        
+       font-size:1.3rem;
+       
+       background-color: rgba(240, 13, 13, 0.89);
+       color:white;
+       width:150px;
+       height:60px;
+       border-radius:12px;
+    }
+    .reminder  button:hover{
+        background: white;
+        color:red;
+    }
+    footer{
+        color:white;
+        text-align: center;
+        background:rgb(0, 15, 66);
+    }
+/*------------------------------------------------ Responsivness ---------------------------------*/
+    @media screen and (max-width:1000px){
+        nav{
+          display: flex;
+          justify-content: center;
+        }
+        nav .links{
+          display:none;
+        }
+        nav .dropBtn{
+          /* margin-right:200px; */
+          display: block;
+          margin-right:10%;
+      
+        }
+        nav>div:first-child{
+          left:15%;
+          flex-direction: row;
+          width:40%;
+        }
+        
+        .values{
+          gap:20px;
+        }
+        .values .card{
+          flex-direction: column-reverse !important;
+          /* align-items: flex-start !important; */
+        }
+        .values .card p {
+          width:100% !important;
+        }
+        .values .card h1{
+          text-align: center;
+        }
+        .values img{
+          transform: translateX(0px) !important;
+        }
+      }
